@@ -1,0 +1,36 @@
+/* css/print.css */
+
+@media print {
+    @page {
+        margin: 1cm;
+        size: A4 portrait;
+    }
+
+    body,
+    main {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* hide your HTML header/footer and download button */
+    header,
+    footer,
+    #download-button {
+        display: none !important;
+    }
+
+    /* avoid awkward page‑breaks */
+    section,
+    article,
+    h2,
+    h3,
+    ul,
+    li {
+        page-break-inside: avoid;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.3;
+    }
+}
