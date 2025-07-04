@@ -5,6 +5,47 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Andres Moises Roman Medina – Computer Engineer</title>
+    <!-- Google Fonts & CSS Variables reset -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --clr-primary: #0066cc;
+            --clr-secondary: #004a99;
+            --clr-bg: #f4f6f8;
+            --clr-card: #ffffff;
+            --clr-text: #2a2a2a;
+            --radius: 8px;
+            --transition: 0.3s ease-in-out;
+            --fw-regular: 400;
+            --fw-semibold: 600;
+            --fw-bold: 700;
+        }
+    
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--clr-bg);
+            color: var(--clr-text);
+            line-height: 1.6;
+        }
+    
+        a {
+            color: var(--clr-primary);
+            text-decoration: none;
+            transition: color var(--transition);
+        }
+    
+        a:hover {
+            color: var(--clr-secondary);
+        }
+    </style>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/print.css" media="print">
 </head>

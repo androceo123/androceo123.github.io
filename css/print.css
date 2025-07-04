@@ -1,18 +1,21 @@
 /* css/print.css */
 
 @media print {
+
+    /* page setup */
     @page {
         margin: 1cm;
         size: A4 portrait;
     }
 
+    /* remove default spacing */
     body,
     main {
         margin: 0;
         padding: 0;
     }
 
-    /* hide your HTML header/footer and download button */
+    /* hide on‑screen only elements */
     header,
     footer,
     #download-button {
@@ -29,8 +32,25 @@
         page-break-inside: avoid;
     }
 
+    /* base typography for print */
     body {
         font-size: 12pt;
         line-height: 1.3;
+    }
+
+    /* ensure background colors actually print */
+    *,
+    *::before,
+    *::after {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* re‑apply hero gradient and white text */
+    #hero {
+        background: linear-gradient(135deg,
+                var(--clr-hero-start) 0%,
+                var(--clr-hero-end) 100%) !important;
+        color: #fff !important;
     }
 }
