@@ -1,8 +1,8 @@
 /* Hero color overrides */
 :root {
-    --clr-hero-start: #5AA8FF;
+    --clr-hero-start: #ffffff;
     /* lighter blue */
-    --clr-hero-end: #84C0FF;
+    --clr-hero-end: #ffffff;
     /* sky‑blue */
 }
 
@@ -18,9 +18,10 @@ section {
     background: var(--clr-card);
     border-radius: var(--radius);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    padding: 2rem;
-    margin-bottom: 2rem;
-}
+    padding: 3rem;
+    /* was 2rem */
+    margin-bottom: 3rem;
+    /* was 2rem */ }
 
 /* HERO */
 #hero {
@@ -28,7 +29,7 @@ section {
     background: linear-gradient(135deg,
             var(--clr-hero-start) 0%,
             var(--clr-hero-end) 100%);
-    color: #fff;
+    color: #000;
     padding: 4rem 2rem;
     border-radius: var(--radius);
     /* subtle text‑shadow for readability */
@@ -103,14 +104,16 @@ ul {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 0.5rem;
+    gap: 1rem;
+    /* was 0.5rem */
 }
 
 ul li {
     position: relative;
     padding-left: 1.2rem;
-    font-weight: var(--fw-regular);
-}
+    margin-bottom: 0.5rem;
+    /* add a bit of vertical space */
+    font-weight: var(--fw-regular); }
 
 ul li::before {
     content: '•';
@@ -129,11 +132,13 @@ ul li::before {
 #experience article p {
     color: #555;
     font-size: 0.95rem;
+    margin-bottom: 1rem;
 }
 
 #experience article ul {
     display: block;
     grid-template-columns: none;
+    margin-top: 1rem;
 }
 
 /* PROJECT CARDS */
@@ -176,4 +181,13 @@ footer {
 #download-button:hover {
     background: var(--clr-secondary);
     transform: translateY(-2px);
+}
+
+/* space between date line and bullet list in Projects */
+#projects article p {
+    margin-bottom: 1rem;
+}
+
+#projects article ul {
+    margin-top: 1rem; 
 }
