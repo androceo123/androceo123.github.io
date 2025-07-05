@@ -32,8 +32,6 @@ section {
     color: #000;
     padding: 4rem 2rem;
     border-radius: var(--radius);
-    /* subtle text‑shadow for readability */
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .avatar {
